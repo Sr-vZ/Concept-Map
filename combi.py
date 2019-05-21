@@ -14,16 +14,18 @@ with open("AttributeList.txt", "r") as f:
 print(len(attrblist))
 
 
-outF = open("myOutFile.txt", "w")
+outF = open("myOutFile1.txt", "w")
 # Get all combinations of attrblist
 # and length 4
 comb = combinations(attrblist, 4)
+# comb = combinations(attrblist, 4)
+print(len(list(comb)))
 # print(list(comb))
 # Print the obtained combinations
-for i in list(comb):
-    outF.write(str(i))
-    outF.write("\n")
-    print (i)
+# for i in list(comb):
+#     outF.write(str(i))
+#     outF.write("\n")
+#     print (i)
 outF.close()
 
 # outF = open("myOutFile.txt", "w")
@@ -34,3 +36,10 @@ outF.close()
 #   outF.write(line)
 #   outF.write("\n")
 # outF.close()
+
+# df = pd.read_excel('sample data.xlsx')
+# print(df['Attributes'])
+
+# combList = list(comb)
+# print(combList)
+# for i in list(comb):
