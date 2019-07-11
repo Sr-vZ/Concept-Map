@@ -5,12 +5,14 @@
 	<meta name="description" content="An abstract mapping for parameters. Works best if first tag is "unique" among the tracklist, and the second tag applies to multiple tracks"/>
 	<meta name="mintags" content="2" />
 	<meta name="maxtags" content="2" />
-	<title>Jam Cellar 2014-05-06</title>
+	<title>Concept Map</title>
 
 <style>
 
 svg {
     font: 12px sans-serif;
+    height: 100%;
+    width: 100%
 }
 
 text {
@@ -63,93 +65,54 @@ text {
 
 //var data = [[120, ["like", "call response", "dramatic intro", "has breaks", "male vocalist", "silly", "swing"]], [150, ["brassy", "like", "calm energy", "female vocalist", "swing", "fun"]], [170, ["calm energy", "instrumental", "swing", "like", "happy"]], [140, ["has breaks", "male vocalist", "swing", "piano", "banjo", "chill"]], [160, ["calm energy", "instrumental", "swing", "like", "interesting"]], [140, ["brassy", "like", "energy", "dramatic intro", "male vocalist", "baseball", "swing"]], [170, ["instrumental", "interesting", "high energy", "like", "swing"]], [140, ["instrumental", "energy", "like", "swing"]], [200, ["instrumental", "brassy", "dramatic intro", "like", "swing"]], [160, ["male vocalist", "brassy", "swing", "like", "my favorites"]], [130, ["like", "interesting", "dramatic intro", "male vocalist", "silly", "swing", "gospel"]], [160, ["like", "long intro", "announcer", "energy", "swing", "female vocalist"]], [170, ["instrumental", "swing", "bass", "like"]], [150, ["like", "interesting", "has breaks", "instrumental", "chunky", "swing", "banjo", "trumpet"]], [170, ["like", "has breaks", "male vocalist", "silly", "swing", "banjo"]], [190, ["instrumental", "banjo", "swing"]], [130, ["instrumental", "brassy", "banjo", "like", "swing"]], [160, ["brassy", "like", "energy", "instrumental", "big band", "jam", "swing"]], [150, ["like", "male vocalist", "live", "swing", "piano", "banjo", "chill"]], [150, ["like", "trick ending", "instrumental", "chunky", "swing", "chill"]], [120, ["brassy", "like", "female vocalist", "swing", "chill", "energy buildup"]], [150, ["brassy", "like", "interesting", "instrumental", "swing", "piano"]], [190, ["brassy", "like", "long intro", "energy", "baseball", "swing", "female vocalist"]], [180, ["calm energy", "female vocalist", "live", "like", "swing"]], [200, ["banjo", "like", "long intro", "interesting", "energy", "my favorites", "male vocalist", "silly", "swing", "fun", "balboa"]], [150, ["brassy", "calm energy", "chunky", "instrumental", "old-timey", "live", "swing"]], [160, ["like", "call response", "interesting", "instrumental", "calm energy", "swing"]], [180, ["interesting", "swing", "fast", "male vocalist"]], [150, ["calm energy", "chunky", "swing", "female vocalist", "like"]], [180, ["like", "has breaks", "male vocalist", "chunky", "silly", "swing"]], [140, ["instrumental", "brassy", "dramatic intro", "swing", "chill"]], [150, ["male vocalist", "trumpet", "like", "swing"]], [150, ["instrumental", "energy", "like", "has breaks", "swing"]], [180, ["brassy", "like", "energy", "has breaks", "instrumental", "has calm", "swing"]], [150, ["female vocalist", "swing"]], [170, ["instrumental", "brassy", "energy", "swing"]], [170, ["calm energy", "instrumental", "energy", "like", "swing"]], [190, ["brassy", "like", "instrumental", "high energy", "swing", "trumpet"]], [160, ["male vocalist", "energy", "swing", "old-timey"]], [170, ["like", "oldies", "my favorites", "fast", "male vocalist", "high energy", "swing"]]];
 
-/*var data = [["Burritoville", ["isBusy", "isAnalogOperated", "isUnderStaffed", "isParticipative", "prefersLocal", "prefersCommodified", "hasConsistentMenu", "usesGreensAcrossMenu", "usesHerbsAcrossMenu", "isPassionate", "IsRistAverse", "isYoung", "prefersDisintermediation", "isCasual"]], ["Mesa14", ["IsGrowthOriented", "isHierarchical", "hasConsistentMenu", "usesGreensAcrossMenu", "usesHerbsAcrossMenu", "RequiresToCheckSample", "HydroponicsAreInUse", "HydroponicsOkay", "ordersAtNight", "ordersWayInAdvance", "hasCloseSupplierRelationship"]], 
-["Tianxia", ["usesGreensAcrossMenu", "prefersCommodified", "isHierarchical", "isFamilyOwned", "isCostFirst", "RequiresToCheckSample", "HydroponicsOkay", "IsRistAverse", "ordersAtNight", "requiresSameDayDelivery", "hasCloseSupplierRelationship", "prefersTheBlackBoxApproach"]], ["Ferrari", ["isExpensive", "changesSuppliersReadily", "requiresSameDayDelivery", "ordersWayInAdvance", "ordersAtNight", "isOld", "IsRistAverse", "IsEfficiencyOriented", "RequiresToCheckSample", "usesHerbsAcrossMenu", "prefersValueAdded", 
-"isBusy"]], ["MisoyaRamen", ["hasExclusiveSupplier", "hasCloseSupplierRelationship", "ordersWayInAdvance", "hasConsistentMenu", "isHierarchical", "isBusy", "isCostFirst", "prefersCommodified", "IsEfficiencyOriented", "isOld"]], ["ChefonCall", ["isBusy", "isHierarchical", "prefersLocal", "IsGrowthOriented", "prefersValueAdded", "hasConsistentMenu", "usesGreensAcrossMenu", "RequiresToCheckSample", "OpenToTasteProfileExperimentation", "HydroponicsOkay", "EmbracesRisk", "isDigitallyEducated", "ordersWayInAdvance", 
-"hasCloseSupplierRelationship", "prefersTheBlackBoxApproach"]], ["Boustan", ["isCheap", "isCasual", "changesSuppliersReadily", "hasCloseSupplierRelationship", "requiresSameDayDelivery", "ordersWayInAdvance", "ordersAtNight", "IsEfficiencyOriented", "IsRistAverse", "IsGrowthOriented", "isHierarchical", "isFranchise", "prefersValueAdded", "hasConsistentMenu", "usesGreensAcrossMenu"]], ["Wienstein&Gavinos", ["isBusy", "isHierarchical", "isCostFirst", "IsGrowthOriented", "prefersCommodified", "hasConsistentMenu", 
-"RequiresToCheckSample", "IsRistAverse", "isOld", "isDigitallyEducated", "ordersAtNight", "requiresSameDayDelivery", "hasCloseSupplierRelationship", "prefersTheBlackBoxApproach", "isCasual"]], ["BurgerBarCrescent", ["isCasual", "foodIsCentral", "requiresSameDayDelivery", "prefersDisintermediation", "isYoung", "IsCulinarySchoolEducated", "HydroponicsOkay", "OpenToTasteProfileExperimentation", "prefersOrganic", "RequiresToCheckSample", "hasRotatingMenu", "prefersLocal", "IsGrowthOriented"]], ["LeGourmetBurger", 
-["needsRareProduce", "prefersValueAdded", "prefersLocal", "isParticipative", "IsGrowthOriented", "RequiresToCheckSample", "usesGreensAcrossMenu", "usesHerbsAcrossMenu", "OperatesWithAVision", "isPassionate", "isDigitallyEducated", "ordersWayInAdvance", "prefersDisintermediation", "prefersTheBlackBoxApproach", "foodIsCentral"]], ["SushiCrecent/Largerparentcompany", ["isAnalogOperated", "isCheap", "isCasual", "hasExclusiveSupplier", "hasCloseSupplierRelationship", "ordersWayInAdvance", "IsCulinarySchoolEducated", 
-"IsEfficiencyOriented", "usesHerbsAcrossMenu", "HydroponicsAreInUse", "HydroponicsOkay", "RequiresToCheckSample", "prefersValueAdded", "needsRareProduce", "isFranchise", "isBusy", "isHierarchical"]], ["BurgerRoyal", ["isParticipative", "IsGrowthOriented", "prefersLocal", "prefersValueAdded", "hasConsistentMenu", "needsRareProduce", "usesGreensAcrossMenu", "usesHerbsAcrossMenu", "RequiresToCheckSample", "OpenToTasteProfileExperimentation", "HydroponicsOkay", "isPassionate", "OperatesWithAVision", 
-"EmbracesRisk", "isDigitallyEducated", "isYoung", "prefersDisintermediation", "ordersAtNight", "hasCloseSupplierRelationship", "foodIsCentral"]], ["McafeExpress", ["prefersOrganic", "prefersValueAdded", "isParticipative", "isAnalogOperated", "isBusy", "usesGreensAcrossMenu", "OpenToTasteProfileExperimentation", "HydroponicsOkay", "OperatesWithAVision", "hasCloseSupplierRelationship", "prefersTheBlackBoxApproach"]], ["JoeBeef", ["isExpensive", "foodIsCentral", "IsCulinarySchoolEducated", "ordersWayInAdvance", 
-"prefersDisintermediation", "hasCloseSupplierRelationship", "hasExclusiveSupplier", "EmbracesRisk", "isDigitallyEducated", "isPassionate", "OperatesWithAVision", "HydroponicsOkay", "RequiresToCheckSample", "usesGreensAcrossMenu", "changesSuppliersReadily", "prefersValueAdded", "prefersLocal", "isHierarchical", "IsGrowthOriented"]], ["Adonis", ["OperatesWithAVision", "IsRistAverse", "changesSuppliersReadily", "prefersTheBlackBoxApproach", "hasCloseSupplierRelationship", "requiresSameDayDelivery", 
-"ordersAtNight", "ordersWayInAdvance", "ConductsFarmVisits", "OpenToTasteProfileExperimentation", "HydroponicsOkay", "HydroponicsAreInUse", "usesHerbsAcrossMenu", "usesGreensAcrossMenu", "RequiresToCheckSample", "prefersLocal", "prefersCommodified", "hasConsistentMenu", "isHierarchical", "IsGrowthOriented", "isFranchise"]], ["Morelatos", ["prefersLocal", "prefersValueAdded", "hasConsistentMenu", "prefersOrganic", "needsRareProduce", "RequiresToCheckSample", "usesGreensAcrossMenu", "usesHerbsAcrossMenu", 
-"isAnalogOperated", "isHierarchical", "IsRistAverse", "isPassionate", "ConductsFarmVisits", "HydroponicsOkay", "ordersAtNight", "isOld", "requiresSameDayDelivery", "prefersDisintermediation", "changesSuppliersReadily", "hasCloseSupplierRelationship", "hasExclusiveSupplier"]], ["Kazu", ["isAnalogOperated", "isBusy", "isHierarchical", "prefersValueAdded", "hasConsistentMenu", "prefersOrganic", "needsRareProduce", "usesHerbsAcrossMenu", "RequiresToCheckSample", "OpenToTasteProfileExperimentation", "OperatesWithAVision", 
-"EmbracesRisk", "IsCulinarySchoolEducated", "ordersWayInAdvance", "hasExclusiveSupplier", "prefersTheBlackBoxApproach", "foodIsCentral", "isExpensive"]], ["AngelasPizza", ["prefersCommodified", "isCostFirst", "isParticipative", "isBusy", "isFamilyOwned", "hasConsistentMenu", "isOld", "IsEfficiencyOriented", "IsRistAverse", "ordersWayInAdvance", "hasCloseSupplierRelationship", "hasExclusiveSupplier", "changesSuppliersReadily", "prefersTheBlackBoxApproach", "isCheap", "isCasual"]], ["IlPaninoCafe", 
-["isParticipative", "isFreshlyOpened", "prefersLocal", "prefersValueAdded", "hasRotatingMenu", "usesGreensAcrossMenu", "HydroponicsOkay", "OperatesWithAVision", "isOld", "isDigitallyEducated", "prefersDisintermediation", "hasExclusiveSupplier", "hasCloseSupplierRelationship", "foodIsCentral"]], ["StudentTastyBiryani", ["isFamilyOwned", "isBusy", "isUnderStaffed", "isHierarchical", "prefersCommodified", "hasConsistentMenu", "usesHerbsAcrossMenu", "IsRistAverse", "isAnalogOperated", "requiresSameDayDelivery", 
-"hasCloseSupplierRelationship", "prefersTheBlackBoxApproach", "isCheap", "isCasual"]], ["Eggspectation", ["isBusy", "isFranchise", "isHierarchical", "IsGrowthOriented", "prefersLocal", "prefersCommodified", "hasConsistentMenu", "prefersOrganic", "needsRareProduce", "usesHerbsAcrossMenu", "usesGreensAcrossMenu", "RequiresToCheckSample", "HydroponicsOkay", "OperatesWithAVision", "isOld", "isDigitallyEducated", "ordersWayInAdvance", "requiresSameDayDelivery", "changesSuppliersReadily", "hasCloseSupplierRelationship", 
-"prefersTheBlackBoxApproach", "isCasual", "isExpensive"]], ["\u00c9toiledesIndes", ["isHierarchical", "isCostFirst", "prefersCommodified", "hasConsistentMenu", "usesHerbsAcrossMenu", "isPassionate", "RequiresToCheckSample", "IsRistAverse", "isOld", "ordersAtNight", "ordersWayInAdvance", "prefersTheBlackBoxApproach", "isExpensive", "hasExclusiveSupplier"]], ["ThaliCuisineIndienne", ["isPassionate", "prefersOrganic", "needsRareProduce", "IsGrowthOriented", "isAnalogOperated", "EmbracesRisk", "isDigitallyEducated", 
-"ordersWayInAdvance", "changesSuppliersReadily", "hasCloseSupplierRelationship", "isCasual"]], ["Sakura", ["foodIsCentral", "hasExclusiveSupplier", "requiresSameDayDelivery", "ordersAtNight", "ordersWayInAdvance", "isOld", "HydroponicsOkay", "hasConsistentMenu", "prefersLocal", "needsRareProduce", "isCostFirst", "isHierarchical"]], ["Al-TaibBoulangerie", ["isFamilyOwned", "isFranchise", "isHierarchical", "isBusy", "isCostFirst", "prefersCommodified", "hasConsistentMenu", "usesGreensAcrossMenu", "usesHerbsAcrossMenu", 
-"HydroponicsOkay", "IsRistAverse", "isOld", "ordersAtNight", "ordersWayInAdvance", "changesSuppliersReadily", "hasCloseSupplierRelationship", "isCasual"]], ["LeFrigoVert", ["isParticipative", "isCostFirst", "prefersLocal", "prefersValueAdded", "prefersCommodified", "hasRotatingMenu", "prefersOrganic", "usesGreensAcrossMenu", "RequiresToCheckSample", "OpenToTasteProfileExperimentation", "isPassionate", "ConductsFarmVisits", "EmbracesRisk", "IsEfficiencyOriented", "isYoung", "prefersDisintermediation", 
-"ordersWayInAdvance", "hasExclusiveSupplier", "hasCloseSupplierRelationship"]], ["MarcheFerdous", ["isFamilyOwned", "isBusy", "isAnalogOperated", "prefersLocal", "prefersCommodified", "hasConsistentMenu", "usesGreensAcrossMenu", "OperatesWithAVision", "EmbracesRisk", "isOld", "ordersWayInAdvance", "hasExclusiveSupplier", "hasCloseSupplierRelationship", "prefersTheBlackBoxApproach"]], ["Kafein", ["prefersTheBlackBoxApproach", "foodIsCentral", "requiresSameDayDelivery", "ordersWayInAdvance", "ordersAtNight", 
-"isDigitallyEducated", "IsRistAverse", "HydroponicsOkay", "OperatesWithAVision", "usesGreensAcrossMenu", "usesHerbsAcrossMenu", "prefersLocal", "prefersValueAdded", "isParticipative"]], ["Latina", ["isExpensive", "ordersWayInAdvance", "hasExclusiveSupplier", "usesHerbsAcrossMenu", "usesGreensAcrossMenu", "prefersOrganic", "prefersValueAdded", "prefersLocal", "prefersTheBlackBoxApproach", "isDigitallyEducated", "hasCloseSupplierRelationship", "prefersDisintermediation", "OpenToTasteProfileExperimentation", 
-"HydroponicsAreInUse", "HydroponicsOkay", "OperatesWithAVision", "IsGrowthOriented"]], ["LePoisPenche", ["isExpensive", "hasExclusiveSupplier", "changesSuppliersReadily", "hasCloseSupplierRelationship", "prefersDisintermediation", "ordersWayInAdvance", "isDigitallyEducated", "HydroponicsOkay", "HydroponicsAreInUse", "OperatesWithAVision", "RequiresToCheckSample", "hasRotatingMenu", "prefersValueAdded", "isParticipative", "ConductsFarmVisits"]], ["Akhavan", ["isFranchise", "isHierarchical", "isBusy", 
-"prefersLocal", "IsGrowthOriented", "prefersCommodified", "hasConsistentMenu", "needsRareProduce", "usesGreensAcrossMenu", "usesHerbsAcrossMenu", "RequiresToCheckSample", "OpenToTasteProfileExperimentation", "HydroponicsOkay", "HydroponicsAreInUse", "OperatesWithAVision", "IsRistAverse", "ConductsFarmVisits", "ordersWayInAdvance", "prefersDisintermediation", "hasExclusiveSupplier", "prefersTheBlackBoxApproach"]], ["AlexandreEtFils", ["isExpensive", "prefersTheBlackBoxApproach", "ConductsFarmVisits", 
-"isDigitallyEducated", "RequiresToCheckSample", "hasConsistentMenu", "isHierarchical", "isBusy", "prefersValueAdded", "needsRareProduce", "IsCulinarySchoolEducated", "hasCloseSupplierRelationship"]], ["CafeAunja", ["isAnalogOperated", "isUnderStaffed", "isParticipative", "prefersLocal", "prefersValueAdded", "hasRotatingMenu", "needsRareProduce", "usesHerbsAcrossMenu", "usesGreensAcrossMenu", "requiresSameDayDelivery", "IsEfficiencyOriented", "OperatesWithAVision", "IsRistAverse", "changesSuppliersReadily", 
-"ordersAtNight"]], ["Clementine", ["isAnalogOperated", "isFreshlyOpened", "isParticipative", "prefersValueAdded", "hasRotatingMenu", "usesHerbsAcrossMenu", "usesGreensAcrossMenu", "RequiresToCheckSample", "isPassionate", "EmbracesRisk", "isYoung", "requiresSameDayDelivery", "prefersDisintermediation", "hasExclusiveSupplier", "prefersTheBlackBoxApproach", "hasCloseSupplierRelationship"]], ["Green", ["isFranchise", "isHierarchical", "prefersLocal", "IsGrowthOriented", "prefersCommodified", "hasConsistentMenu", 
-"prefersOrganic", "usesGreensAcrossMenu", "OpenToTasteProfileExperimentation", "HydroponicsAreInUse", "HydroponicsOkay", "IsRistAverse", "isDigitallyEducated", "ordersAtNight", "hasCloseSupplierRelationship", "hasExclusiveSupplier", "changesSuppliersReadily", "prefersTheBlackBoxApproach"]], ["Omnivore", ["hasRotatingMenu", "hasConsistentMenu", "usesHerbsAcrossMenu", "usesGreensAcrossMenu", "RequiresToCheckSample", "OpenToTasteProfileExperimentation", "ConductsFarmVisits", "OperatesWithAVision", "EmbracesRisk", 
-"isDigitallyEducated", "ordersAtNight", "requiresSameDayDelivery", "prefersDisintermediation", "hasCloseSupplierRelationship", "prefersTheBlackBoxApproach", "isCostFirst", "isParticipative", "prefersCommodified", "prefersLocal"]], ["Vego", ["isBusy", "isFranchise", "isUnderStaffed", "isHierarchical", "IsGrowthOriented", "prefersCommodified", "hasConsistentMenu", "prefersOrganic", "usesGreensAcrossMenu", "usesHerbsAcrossMenu", "RequiresToCheckSample", "OperatesWithAVision", "IsEfficiencyOriented", 
-"isOld", "isDigitallyEducated", "ordersAtNight", "ordersWayInAdvance", "hasCloseSupplierRelationship", "hasExclusiveSupplier", "changesSuppliersReadily", "prefersTheBlackBoxApproach"]], ["Beatrice", ["prefersValueAdded", "isAnalogOperated", "isHierarchical", "IsGrowthOriented", "prefersOrganic", "needsRareProduce", "usesGreensAcrossMenu", "isPassionate", "IsRistAverse", "IsCulinarySchoolEducated", "ordersWayInAdvance", "changesSuppliersReadily", "prefersTheBlackBoxApproach", "isExpensive"]], ["MKT", 
-["isExpensive", "foodIsCentral", "prefersTheBlackBoxApproach", "requiresSameDayDelivery", "ordersAtNight", "hasCloseSupplierRelationship", "ConductsFarmVisits", "HydroponicsAreInUse", "HydroponicsOkay", "prefersValueAdded", "prefersCommodified", "isCostFirst", "isBusy", "isHierarchical", "isAnalogOperated", "needsRareProduce", "usesGreensAcrossMenu", "isYoung", "prefersDisintermediation"]], ["Bonaparte", ["hasRotatingMenu", "IsGrowthOriented", "isUnderStaffed", "prefersLocal", "needsRareProduce", 
-"isBusy", "usesHerbsAcrossMenu", "RequiresToCheckSample", "usesGreensAcrossMenu", "HydroponicsOkay", "HydroponicsAreInUse", "EmbracesRisk", "IsCulinarySchoolEducated", "requiresSameDayDelivery", "hasCloseSupplierRelationship", "ordersWayInAdvance", "prefersTheBlackBoxApproach", "foodIsCentral", "isExpensive"]], ["CafeLolaRosa", ["foodIsCentral", "ConductsFarmVisits", "isPassionate", "prefersOrganic", "hasConsistentMenu", "prefersValueAdded", "prefersLocal", "isFranchise", "isBusy", "isHierarchical", 
-"IsGrowthOriented", "needsRareProduce", "OperatesWithAVision", "EmbracesRisk", "ordersWayInAdvance", "prefersDisintermediation", "prefersTheBlackBoxApproach", "hasExclusiveSupplier"]], ["RestaurantHolder", ["isAnalogOperated", "isHierarchical", "hasConsistentMenu", "needsRareProduce", "usesGreensAcrossMenu", "IsGrowthOriented", "HydroponicsOkay", "OperatesWithAVision", "EmbracesRisk", "ordersWayInAdvance", "hasExclusiveSupplier", "isOld", "ordersAtNight", "prefersTheBlackBoxApproach", "isExpensive"]], 
-["L'Express", ["isAnalogOperated", "isHierarchical", "prefersLocal", "prefersValueAdded", "needsRareProduce", "prefersOrganic", "usesHerbsAcrossMenu", "RequiresToCheckSample", "OperatesWithAVision", "IsEfficiencyOriented", "HydroponicsOkay", "isDigitallyEducated", "isOld", "IsRistAverse", "prefersDisintermediation", "requiresSameDayDelivery", "isExpensive", "prefersTheBlackBoxApproach", "hasExclusiveSupplier"]], ["Lecartet", ["isBusy", "isAnalogOperated", "isHierarchical", "prefersValueAdded", "needsRareProduce", 
-"prefersOrganic", "RequiresToCheckSample", "HydroponicsOkay", "ConductsFarmVisits", "IsEfficiencyOriented", "EmbracesRisk", "ordersWayInAdvance", "hasExclusiveSupplier", "isOld", "changesSuppliersReadily", "prefersTheBlackBoxApproach", "hasCloseSupplierRelationship"]]]
-*/
 
-var data = [[139,['isBusy','IsGrowthOriented','usesGreensAcrossMenu','isExpensive']],
-[126,['hasExclusiveSupplier','isCheap','isCasual','needsRareProduce']],
-[116,['isAnalogOperated','isParticipative','prefersOrganic','OperatesWithAVision']],
-[126,['prefersLocal','prefersCommodified','isFamilyOwned','isHierarchical']],
-[123,['isPassionate','foodIsCentral','prefersTheBlackBoxApproach','isFranchise']],
-[169,['hasRotatingMenu','prefersValueAdded','HydroponicsOkay','usesHerbsAcrossMenu']],
-[112,['hasConsistentMenu','HydroponicsAreInUse','isCostFirst','changesSuppliersReadily']],
-[178,['hasCloseSupplierRelationship','IsRistAverse','isFreshlyOpened','ordersWayInAdvance']],
-[86,['isUnderStaffed','ConductsFarmVisits','requiresSameDayDelivery','IsCulinarySchoolEducated']],
-[157,['ordersAtNight','prefersDisintermediation','isDigitallyEducated','isOld']],
-[113,['isYoung','RequiresToCheckSample','IsEfficiencyOriented','OpenToTasteProfileExperimentation']],
-[139,['isBusy','IsGrowthOriented','usesGreensAcrossMenu','isExpensive']],
-[169,['IsGrowthOriented','usesGreensAcrossMenu','isExpensive','hasExclusiveSupplier']],
-[138,['usesGreensAcrossMenu','isExpensive','hasExclusiveSupplier','isCheap']],
-[119,['isExpensive','hasExclusiveSupplier','isCheap','isCasual']],
-[126,['hasExclusiveSupplier','isCheap','isCasual','needsRareProduce']],
-[99,['isCheap','isCasual','needsRareProduce','isAnalogOperated']],
-[122,['isCasual','needsRareProduce','isAnalogOperated','isParticipative']],
-[120,['needsRareProduce','isAnalogOperated','isParticipative','prefersOrganic']],
-[116,['isAnalogOperated','isParticipative','prefersOrganic','OperatesWithAVision']],
-[130,['isParticipative','prefersOrganic','OperatesWithAVision','prefersLocal']],
-[131,['prefersOrganic','OperatesWithAVision','prefersLocal','prefersCommodified']],
-[111,['OperatesWithAVision','prefersLocal','prefersCommodified','isFamilyOwned']],
-[126,['prefersLocal','prefersCommodified','isFamilyOwned','isHierarchical']],
-[114,['prefersCommodified','isFamilyOwned','isHierarchical','isPassionate']],
-[106,['isFamilyOwned','isHierarchical','isPassionate','foodIsCentral']],
-[160,['isHierarchical','isPassionate','foodIsCentral','prefersTheBlackBoxApproach']],
-[123,['isPassionate','foodIsCentral','prefersTheBlackBoxApproach','isFranchise']],
-[116,['foodIsCentral','prefersTheBlackBoxApproach','isFranchise','hasRotatingMenu']],
-[140,['prefersTheBlackBoxApproach','isFranchise','hasRotatingMenu','prefersValueAdded']],
-[129,['isFranchise','hasRotatingMenu','prefersValueAdded','HydroponicsOkay']],
-[169,['hasRotatingMenu','prefersValueAdded','HydroponicsOkay','usesHerbsAcrossMenu']],
-[187,['prefersValueAdded','HydroponicsOkay','usesHerbsAcrossMenu','hasConsistentMenu']],
-[155,['HydroponicsOkay','usesHerbsAcrossMenu','hasConsistentMenu','HydroponicsAreInUse']],
-[133,['usesHerbsAcrossMenu','hasConsistentMenu','HydroponicsAreInUse','isCostFirst']],
-[112,['hasConsistentMenu','HydroponicsAreInUse','isCostFirst','changesSuppliersReadily']],
-[140,['HydroponicsAreInUse','isCostFirst','changesSuppliersReadily','hasCloseSupplierRelationship']],
-[160,['isCostFirst','changesSuppliersReadily','hasCloseSupplierRelationship','IsRistAverse']],
-[140,['changesSuppliersReadily','hasCloseSupplierRelationship','IsRistAverse','isFreshlyOpened']],
-[178,['hasCloseSupplierRelationship','IsRistAverse','isFreshlyOpened','ordersWayInAdvance']],
-[113,['IsRistAverse','isFreshlyOpened','ordersWayInAdvance','isUnderStaffed']],
-[106,['isFreshlyOpened','ordersWayInAdvance','isUnderStaffed','ConductsFarmVisits']],
-[133,['ordersWayInAdvance','isUnderStaffed','ConductsFarmVisits','requiresSameDayDelivery']],
-[86,['isUnderStaffed','ConductsFarmVisits','requiresSameDayDelivery','IsCulinarySchoolEducated']],
-[128,['ConductsFarmVisits','requiresSameDayDelivery','IsCulinarySchoolEducated','ordersAtNight']],
-[139,['requiresSameDayDelivery','IsCulinarySchoolEducated','ordersAtNight','prefersDisintermediation']],
-[144,['IsCulinarySchoolEducated','ordersAtNight','prefersDisintermediation','isDigitallyEducated']],
-[157,['ordersAtNight','prefersDisintermediation','isDigitallyEducated','isOld']],
-[126,['prefersDisintermediation','isDigitallyEducated','isOld','isYoung']],
-[128,['isDigitallyEducated','isOld','isYoung','RequiresToCheckSample']],
-[108,['isOld','isYoung','RequiresToCheckSample','IsEfficiencyOriented']],
-[100,['isYoung','RequiresToCheckSample','IsEfficiencyOriented','OpenToTasteProfileExperimentation']],
-[109,['RequiresToCheckSample','IsEfficiencyOriented','OpenToTasteProfileExperimentation','EmbracesRisk']],
-]
+/*d3.json("attributemap.json", function(data) {
+    console.log(data);
+    drawMap(data)
+});*/
+
+var data =[[20, ["hasCloseSupplierRelationship", "ordersWayInAdvance", "prefersTheBlackBoxApproach",
+"hasExclusiveSupplier"]],
+[18, ["hasCloseSupplierRelationship", "ordersWayInAdvance", "prefersTheBlackBoxApproach", "hasConsistentMenu"]],
+[18, ["hasCloseSupplierRelationship", "ordersWayInAdvance", "isHierarchical", "hasConsistentMenu"]],
+[18, ["hasCloseSupplierRelationship", "ordersWayInAdvance", "hasExclusiveSupplier", "ordersAtNight"]],
+[18, ["ordersWayInAdvance", "prefersTheBlackBoxApproach", "isHierarchical", "hasExclusiveSupplier"]],
+[18, ["ordersWayInAdvance", "prefersTheBlackBoxApproach", "isHierarchical", "hasConsistentMenu"]],
+[18, ["ordersWayInAdvance", "prefersTheBlackBoxApproach", "hasExclusiveSupplier", "hasConsistentMenu"]],
+[17, ["hasCloseSupplierRelationship", "ordersWayInAdvance", "usesGreensAcrossMenu", "HydroponicsOkay"]],
+[17, ["hasCloseSupplierRelationship", "ordersWayInAdvance", "prefersTheBlackBoxApproach", "HydroponicsOkay"]],
+[17, ["hasCloseSupplierRelationship", "ordersWayInAdvance", "HydroponicsOkay", "usesHerbsAcrossMenu"]],
+[17, ["hasCloseSupplierRelationship", "prefersTheBlackBoxApproach", "isHierarchical", "hasConsistentMenu"]],
+[16, ["hasCloseSupplierRelationship", "ordersWayInAdvance", "usesGreensAcrossMenu", "prefersTheBlackBoxApproach"]],
+[16, ["hasCloseSupplierRelationship", "ordersWayInAdvance", "prefersTheBlackBoxApproach", "isHierarchical"]],
+[16, ["hasCloseSupplierRelationship", "ordersWayInAdvance", "prefersTheBlackBoxApproach", "ordersAtNight"]],
+[16, ["hasCloseSupplierRelationship", "ordersWayInAdvance", "hasExclusiveSupplier", "HydroponicsOkay"]],
+[16, ["hasCloseSupplierRelationship", "ordersWayInAdvance", "hasExclusiveSupplier", "hasConsistentMenu"]],
+[16, ["hasCloseSupplierRelationship", "ordersWayInAdvance", "hasConsistentMenu", "ordersAtNight"]],
+[16, ["ordersWayInAdvance", "isHierarchical", "hasExclusiveSupplier", "hasConsistentMenu"]],
+[16, ["prefersTheBlackBoxApproach", "isHierarchical", "hasExclusiveSupplier", "hasConsistentMenu"]],
+[15, ["hasCloseSupplierRelationship", "ordersWayInAdvance", "usesGreensAcrossMenu", "isHierarchical"]],
+[15, ["hasCloseSupplierRelationship", "ordersWayInAdvance", "usesGreensAcrossMenu", "hasExclusiveSupplier"]],
+[15, ["hasCloseSupplierRelationship", "ordersWayInAdvance", "usesGreensAcrossMenu", "hasConsistentMenu"]],
+[15, ["hasCloseSupplierRelationship", "ordersWayInAdvance", "prefersTheBlackBoxApproach", "usesHerbsAcrossMenu"]],
+[15, ["hasCloseSupplierRelationship", "ordersWayInAdvance", "prefersTheBlackBoxApproach", "prefersLocal"]],
+[15, ["hasCloseSupplierRelationship", "ordersWayInAdvance", "isHierarchical", "hasExclusiveSupplier"]],
+[15, ["hasCloseSupplierRelationship", "ordersWayInAdvance", "HydroponicsOkay", "RequiresToCheckSample"]],
+[15, ["hasCloseSupplierRelationship", "ordersWayInAdvance", "HydroponicsOkay", "isDigitallyEducated"]],
+[15, ["hasCloseSupplierRelationship", "ordersWayInAdvance", "usesHerbsAcrossMenu", "ordersAtNight"]],
+[15, ["hasCloseSupplierRelationship", "ordersWayInAdvance", "hasConsistentMenu", "prefersCommodified"]],
+[15, ["hasCloseSupplierRelationship", "usesGreensAcrossMenu", "isHierarchical", "hasConsistentMenu"]],
+[15, ["ordersWayInAdvance", "usesGreensAcrossMenu", "isHierarchical", "hasConsistentMenu"]],
+[15, ["ordersWayInAdvance", "usesGreensAcrossMenu", "HydroponicsOkay", "usesHerbsAcrossMenu"]],
+[15, ["ordersWayInAdvance", "prefersTheBlackBoxApproach", "hasExclusiveSupplier", "ordersAtNight"]],
+[14, ["hasCloseSupplierRelationship", "ordersWayInAdvance", "isHierarchical", "HydroponicsOkay"]],
+[14, ["hasCloseSupplierRelationship", "ordersWayInAdvance", "hasExclusiveSupplier", "usesHerbsAcrossMenu"]],
+[14, ["hasCloseSupplierRelationship", "ordersWayInAdvance", "hasExclusiveSupplier", "isOld"]],
+[14, ["hasCloseSupplierRelationship", "ordersWayInAdvance", "hasExclusiveSupplier", "isPassionate"]],
+[14, ["hasCloseSupplierRelationship", "ordersWayInAdvance", "hasConsistentMenu", "IsGrowthOriented"]],
+[14, ["hasCloseSupplierRelationship", "usesGreensAcrossMenu", "prefersTheBlackBoxApproach", "HydroponicsOkay"]]]
+
+
 // transform the data into a useful representation
 // 1 is inner, 2, is outer
 
@@ -157,8 +120,9 @@ var data = [[139,['isBusy','IsGrowthOriented','usesGreensAcrossMenu','isExpensiv
 //
 // inner: 
 // links: { inner: outer: }
+drawMap(data)
 
-
+function drawMap(data){
 var outer = d3.map();
 var inner = [];
 var links = [];
@@ -247,7 +211,7 @@ var colors = ["#219c1a",
 "#e94c00",
 "#ff1904"]
 var color = d3.scale.linear()
-    .domain([75, 200])
+    .domain([14, 20])
     .range([colors.length-1, 0])
     .clamp(true);
 
@@ -409,6 +373,6 @@ function mouseout(d)
     for (var i = 0; i < d.related_links.length; i++)
         d3.select("#" + d.related_links[i]).attr("stroke-width", link_width);
 }
-
+}
 </script>
 
